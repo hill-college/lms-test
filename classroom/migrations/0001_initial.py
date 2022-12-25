@@ -71,7 +71,7 @@ class Migration(migrations.Migration):
                 ('roll_no', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone', models.IntegerField()),
-                ('student_profile_pic', models.ImageField(blank=True, upload_to='classroom/student_profile_pic')),
+                ('student_profile_pic', models.ImageField(blank=True, upload_to='class/student_profile_pic')),
             ],
             options={
                 'ordering': ['roll_no'],
@@ -85,7 +85,7 @@ class Migration(migrations.Migration):
                 ('subject_name', models.CharField(max_length=250)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone', models.IntegerField()),
-                ('teacher_profile_pic', models.ImageField(blank=True, upload_to='classroom/teacher_profile_pic')),
+                ('teacher_profile_pic', models.ImageField(blank=True, upload_to='class/teacher_profile_pic')),
                 ('class_students', models.ManyToManyField(through='classroom.StudentsInClass', to='classroom.Student')),
             ],
         ),
